@@ -34,8 +34,8 @@
 	a4paper,
 	left=0.8in,
 	right=0.8in,
-	top=0.70in,
-	bottom=0.55in,
+	top=0.60in,
+	bottom=0.3in,
 	nohead
 ]{geometry}
 
@@ -43,8 +43,9 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
 %\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
+\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc,before={\small},after={\normalfont}}  % 列表内容为 small 字号
+\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc,before={\small},after={\normalfont}}       % 列表内容为 small 字号
+
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
@@ -72,7 +73,7 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  \centerline{\LARGE\scshape{#1}}
   \vspace{1.25ex}
 }
 
@@ -117,6 +118,6 @@
 }
 
 \newcommand{\role}[2]{
-  {\par \textit{#1} ~ #2 \par}
-  \vspace{0.85ex}
+  {\par \small\textit{#1} ~ #2 \par}
+  \vspace{0.5ex}
 }
